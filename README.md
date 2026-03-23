@@ -9,10 +9,10 @@ Welcome to my Automation Testing Portfolio! This repository is designed to demon
 - **Synchronization**: Using Explicit Waits effectively (`Wait Until Element Is Visible`) to ensure tests are stable and not flaky.
 
 ## ✅ Test Execution Results (100% PASS)
-I have pre-run all test suites locally to prove their reliability. You can view the complete, passing execution logs by opening the files below (simply download the repository and double-click to open in any browser):
+I have pre-run all test suites locally to prove their reliability. You can view the complete, passing execution logs directly in your browser using the HTML Preview links below:
 
-- 🟢 **Automated Login Flow**: [Test Report](./Automated-LogIn-Form-Filling/report.html) | [Detailed Log](./Automated-LogIn-Form-Filling/log.html)
-- 🟢 **Complex Form Filling**: [Test Report](./Form-filling/report.html) | [Detailed Log](./Form-filling/log.html)
+- 🟢 **Automated Login Flow**: [Open Test Report](https://htmlpreview.github.io/?https://github.com/panwyyt/robotframework-selenium-portfolio/blob/main/Automated-LogIn-Form-Filling/report.html) | [Open Detailed Log](https://htmlpreview.github.io/?https://github.com/panwyyt/robotframework-selenium-portfolio/blob/main/Automated-LogIn-Form-Filling/log.html)
+- 🟢 **Complex Form Filling**: [Open Test Report](https://htmlpreview.github.io/?https://github.com/panwyyt/robotframework-selenium-portfolio/blob/main/Form-filling/report.html) | [Open Detailed Log](https://htmlpreview.github.io/?https://github.com/panwyyt/robotframework-selenium-portfolio/blob/main/Form-filling/log.html)
 
 ---
 
