@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.3 on darwin)" generated="2026-03-24T04:06:32.556939" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Case" source="/Users/tocilic/Documents/selenium-boo-portfolio-github/Automated-LogIn-Form-Filling/test_case.robot">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-24T04:06:32.670533" elapsed="0.000099"/>
+</kw>
+<kw name="Open Browser To Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:06:32.670961" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-24T04:06:32.670860" elapsed="7.597609"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-24T04:06:40.269415" elapsed="0.573083"/>
+</kw>
+<doc>เปิดเบราว์เซอร์ไปที่หน้าล็อกอินและขยายหน้าจอให้เต็ม</doc>
+<status status="PASS" start="2026-03-24T04:06:32.670758" elapsed="8.171905"/>
+</kw>
+<arg>Set Selenium Speed</arg>
+<arg>0.2</arg>
+<arg>AND</arg>
+<arg>Open Browser To Login Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-03-24T04:06:32.670279" elapsed="8.172492"/>
+</kw>
+<test id="s1-t1" name="Scenario: ล็อกอินสำเร็จด้วยข้อมูลที่ถูกต้อง" line="10">
+<kw name="Input Login Username" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_USERNAME}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-24T04:06:40.845393" elapsed="0.437363"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:06:41.284525" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>${TXT_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:06:41.283415" elapsed="0.729353"/>
+</kw>
+<arg>tomsmith</arg>
+<doc>รอให้ช่องกรอกข้อมูลแสดงขึ้นมา และทำการกรอก username</doc>
+<status status="PASS" start="2026-03-24T04:06:40.845122" elapsed="1.167757"/>
+</kw>
+<kw name="Input Login Password" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:06:42.013421" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>${TXT_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:06:42.013285" elapsed="0.667959"/>
+</kw>
+<arg>SuperSecretPassword!</arg>
+<doc>กรอก password ลงในช่อง</doc>
+<status status="PASS" start="2026-03-24T04:06:42.013095" elapsed="0.668335"/>
+</kw>
+<kw name="Click Login Button" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:06:42.682546" level="INFO">Clicking element 'css=button.radius'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:06:42.682226" elapsed="0.470405"/>
+</kw>
+<doc>คลิกที่ปุ่มล็อกอิน</doc>
+<status status="PASS" start="2026-03-24T04:06:42.681800" elapsed="0.471183"/>
+</kw>
+<kw name="Verify Login Success" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MSG_FLASH}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-24T04:06:43.153942" elapsed="1.246042"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:06:44.838724" level="INFO">Element 'id=flash' contains text 'You logged into a secure area!'.</msg>
+<arg>${MSG_FLASH}</arg>
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-03-24T04:06:44.400701" elapsed="0.438229"/>
+</kw>
+<doc>ตรวจสอบว่าระบบแสดงข้อความล็อกอินสำเร็จ</doc>
+<status status="PASS" start="2026-03-24T04:06:43.153473" elapsed="1.685610"/>
+</kw>
+<doc>ทดสอบการกรอกชื่อและรหัสผ่านที่ถูกต้อง (Valid Login Scenario)
+ระบบควรล็อกอินผ่านและเข้าหน้า Secure Area ได้สำเร็จ</doc>
+<status status="PASS" start="2026-03-24T04:06:40.843185" elapsed="3.996181"/>
+</test>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-24T04:06:47.842440" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-24T04:06:44.841959" elapsed="3.000578"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-24T04:06:47.842681" elapsed="0.276067"/>
+</kw>
+<arg>Sleep</arg>
+<arg>3s</arg>
+<arg>AND</arg>
+<arg>Close Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-03-24T04:06:44.840445" elapsed="3.278451"/>
+</kw>
+<doc>โปรเจกต์ทดสอบการล็อกอินแบบอัตโนมัติ (Automated Login Form Filling)</doc>
+<status status="PASS" start="2026-03-24T04:06:32.557739" elapsed="15.561232"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Case" id="s1" pass="1" fail="0" skip="0">Test Case</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

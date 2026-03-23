@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.3 on darwin)" generated="2026-03-24T04:07:22.538217" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Case" source="/Users/tocilic/Documents/selenium-boo-portfolio-github/Form-filling/test_case.robot">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-24T04:07:22.652555" elapsed="0.000096"/>
+</kw>
+<kw name="Open Browser To Form Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:22.652969" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-24T04:07:22.652879" elapsed="3.416361"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-24T04:07:26.069782" elapsed="2.459297"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_firstName}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-24T04:07:28.529292" elapsed="0.423796"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:22.652776" elapsed="6.300474"/>
+</kw>
+<arg>Set Selenium Speed</arg>
+<arg>0.2</arg>
+<arg>AND</arg>
+<arg>Open Browser To Form Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-03-24T04:07:22.652307" elapsed="6.301088"/>
+</kw>
+<test id="s1-t1" name="Fill Basic Info" line="9">
+<kw name="Fill Basic Info" owner="keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2026-03-24T04:07:28.954622" level="INFO">${f} = xHLhTfMD</msg>
+<var>${f}</var>
+<arg>8</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-03-24T04:07:28.954371" elapsed="0.000278"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-03-24T04:07:28.954809" level="INFO">${l} = crOhProHMD</msg>
+<var>${l}</var>
+<arg>10</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-03-24T04:07:28.954721" elapsed="0.000101"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-03-24T04:07:28.954942" level="INFO">${e} = ulHKe</msg>
+<var>${e}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-03-24T04:07:28.954875" elapsed="0.000080"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-03-24T04:07:28.955073" level="INFO">${a} = KZRWyBkxWmJlMmD</msg>
+<var>${a}</var>
+<arg>15</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-03-24T04:07:28.955007" elapsed="0.000078"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-03-24T04:07:28.955196" level="INFO">${m} = 8892470770</msg>
+<var>${m}</var>
+<arg>10</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-03-24T04:07:28.955131" elapsed="0.000077"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:28.955427" level="INFO">Typing text 'xHLhTfMD' into text field 'id=firstName'.</msg>
+<arg>${TXT_firstName}</arg>
+<arg>${f}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:28.955266" elapsed="0.737021"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:29.692603" level="INFO">Typing text 'crOhProHMD' into text field 'css=input#lastName'.</msg>
+<arg>${TXT_lastName}</arg>
+<arg>${l}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:29.692430" elapsed="1.852741"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:31.545837" level="INFO">Typing text 'ulHKe@test.com' into text field 'css=input#userEmail'.</msg>
+<arg>${TXT_email}</arg>
+<arg>${e}@test.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:31.545446" elapsed="0.691513"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:32.238385" level="INFO">Typing text '8892470770' into text field 'id=userNumber'.</msg>
+<arg>${TXT_MobileNumber}</arg>
+<arg>${m}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:32.237616" elapsed="0.700796"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:32.939019" level="INFO">Typing text 'KZRWyBkxWmJlMmD' into text field 'id=currentAddress'.</msg>
+<arg>${TXT_Address}</arg>
+<arg>${a}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:32.938688" elapsed="0.677335"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:28.954156" elapsed="4.662145"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:28.953512" elapsed="4.663307"/>
+</test>
+<test id="s1-t2" name="Select Gender" line="12">
+<kw name="Select Gender" owner="keywords">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:33.619099" level="INFO">Selecting 'Male' from radio button 'gender'.</msg>
+<arg>${RAD_GENDER_GROUP}</arg>
+<arg>${user_gender}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2026-03-24T04:07:33.618731" elapsed="0.706040"/>
+</kw>
+<arg>Male</arg>
+<status status="PASS" start="2026-03-24T04:07:33.618116" elapsed="0.707007"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:33.617307" elapsed="0.708263"/>
+</test>
+<test id="s1-t3" name="Fill Date Of Birth" line="15">
+<kw name="Fill Date Of Birth" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:34.329687" level="INFO">Clicking element 'id=dateOfBirthInput'.</msg>
+<arg>${TXT_DOB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:34.329251" elapsed="0.471765"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:34.802324" level="INFO">Sending key(s) ('COMMAND+a',) to id=dateOfBirthInput element.</msg>
+<msg time="2026-03-24T04:07:35.500923" level="INFO">Pressing special key COMMAND down.</msg>
+<msg time="2026-03-24T04:07:35.501132" level="INFO">Sending key a</msg>
+<msg time="2026-03-24T04:07:35.501209" level="INFO">Releasing special key COMMAND.</msg>
+<arg>${TXT_DOB}</arg>
+<arg>COMMAND+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-03-24T04:07:34.801427" elapsed="0.915665"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:35.719279" level="INFO">Typing text '01 Jan 2000' into text field 'id=dateOfBirthInput'.</msg>
+<arg>${TXT_DOB}</arg>
+<arg>${new_date}</arg>
+<arg>clear=False</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:35.717973" elapsed="0.496441"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:36.216389" level="INFO">Sending key(s) ('ENTER',) to id=dateOfBirthInput element.</msg>
+<msg time="2026-03-24T04:07:36.904845" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-03-24T04:07:36.904962" level="INFO">Releasing special key ENTER.</msg>
+<arg>${TXT_DOB}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-03-24T04:07:36.215148" elapsed="0.899604"/>
+</kw>
+<arg>01 Jan 2000</arg>
+<doc>คีย์เวิร์ดสำหรับกรอกวันเกิดลงในช่อง Date of Birth Input
+- รูปแบบวันที่ที่รองรับ (Format): DD MMM YYYY (เช่น 01 Jan 2026)
+- ตัวอย่าง: 25 Dec 1995, 10 Aug 2000</doc>
+<status status="PASS" start="2026-03-24T04:07:34.328492" elapsed="2.786436"/>
+</kw>
+<tag>debug</tag>
+<status status="PASS" start="2026-03-24T04:07:34.326035" elapsed="2.789128"/>
+</test>
+<test id="s1-t4" name="Pick Subject" line="18">
+<kw name="Pick Subject" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:37.116225" level="INFO">Typing text 'Math' into text field 'id=subjectsInput'.</msg>
+<arg>${TXT_SUBJECT}</arg>
+<arg>${subject1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:37.116060" elapsed="0.660031"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:37.776673" level="INFO">Sending key(s) ('ENTER',) to id=subjectsInput element.</msg>
+<msg time="2026-03-24T04:07:38.446164" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-03-24T04:07:38.446273" level="INFO">Releasing special key ENTER.</msg>
+<arg>${TXT_SUBJECT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-03-24T04:07:37.776294" elapsed="0.885983"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:38.663535" level="INFO">Typing text 'Physics' into text field 'id=subjectsInput'.</msg>
+<arg>${TXT_SUBJECT}</arg>
+<arg>${subject2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:38.662918" elapsed="0.677623"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:39.340964" level="INFO">Sending key(s) ('ENTER',) to id=subjectsInput element.</msg>
+<msg time="2026-03-24T04:07:40.016965" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-03-24T04:07:40.017303" level="INFO">Releasing special key ENTER.</msg>
+<arg>${TXT_SUBJECT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-03-24T04:07:39.340691" elapsed="0.893516"/>
+</kw>
+<arg>Math</arg>
+<arg>Physics</arg>
+<status status="PASS" start="2026-03-24T04:07:37.115825" elapsed="3.118553"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:37.115425" elapsed="3.119166"/>
+</test>
+<test id="s1-t5" name="Pick Hobbies" line="21">
+<kw name="Pick Hobbies" owner="keywords">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2026-03-24T04:07:40.236217" level="INFO">${all_hobbies} = ['Sports', 'Music', None]</msg>
+<var>${all_hobbies}</var>
+<arg>${h1}</arg>
+<arg>${h2}</arg>
+<arg>${h3}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2026-03-24T04:07:40.235573" elapsed="0.000677"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:40.237119" level="INFO">Clicking element 'id=hobbies-checkbox-1'.</msg>
+<arg>${CHK_HOBBIES_SPORTS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:40.236930" elapsed="0.478221"/>
+</kw>
+<arg>'Sports' in ${all_hobbies}</arg>
+<arg>Click Element</arg>
+<arg>${CHK_HOBBIES_SPORTS}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-03-24T04:07:40.236407" elapsed="0.479089"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'Reading' in ${all_hobbies}</arg>
+<arg>Click Element</arg>
+<arg>${CHK_HOBBIES_READING}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-03-24T04:07:40.715909" elapsed="0.001123"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:40.718248" level="INFO">Clicking element 'id=hobbies-checkbox-3'.</msg>
+<arg>${CHK_HOBBIES_MUSIC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:40.717897" elapsed="0.464590"/>
+</kw>
+<arg>'Music' in ${all_hobbies}</arg>
+<arg>Click Element</arg>
+<arg>${CHK_HOBBIES_MUSIC}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-03-24T04:07:40.717221" elapsed="0.465739"/>
+</kw>
+<arg>Sports</arg>
+<arg>Music</arg>
+<doc>คีย์เวิร์ดสำหรับเลือก Hobbies ที่ต้องการ โดยสามารถเลือกได้สูงสุด 3 อย่าง ได้แก่ Sports, Reading, และ Music และไม่จำเป็นต้องเลือกครบก็ได้</doc>
+<status status="PASS" start="2026-03-24T04:07:40.235195" elapsed="0.948041"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:40.234798" elapsed="0.949079"/>
+</test>
+<test id="s1-t6" name="Upload Picture" line="24">
+<kw name="Upload Picture" owner="keywords">
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:41.187502" level="INFO">Sending /Users/tocilic/Documents/selenium-boo-portfolio-github/Form-filling/test_image.png to browser.</msg>
+<arg>${IMG_UPLOAD}</arg>
+<arg>${img_path}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:41.186920" elapsed="0.461818"/>
+</kw>
+<arg>/Users/tocilic/Documents/selenium-boo-portfolio-github/Form-filling/test_image.png</arg>
+<status status="PASS" start="2026-03-24T04:07:41.185998" elapsed="0.463202"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:41.184672" elapsed="0.465101"/>
+</test>
+<test id="s1-t7" name="Pick State And City" line="27">
+<kw name="Pick State And City" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:41.652955" level="INFO">Clicking element 'xpath=//div[@id='state']//input'.</msg>
+<arg>${TXT_STATE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:41.652439" elapsed="0.480339"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:42.134024" level="INFO">Typing text 'Haryana' into text field 'xpath=//div[@id='state']//input'.</msg>
+<arg>${TXT_STATE}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:42.133396" elapsed="0.695531"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:42.831435" level="INFO">Sending key(s) ('ENTER',) to xpath=//div[@id='state']//input element.</msg>
+<msg time="2026-03-24T04:07:43.518800" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-03-24T04:07:43.518967" level="INFO">Releasing special key ENTER.</msg>
+<arg>${TXT_STATE}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-03-24T04:07:42.829831" elapsed="0.907860"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:43.739496" level="INFO">Clicking element 'xpath=//div[@id='city']//input'.</msg>
+<arg>${TXT_CITY}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:43.738533" elapsed="0.468183"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:44.208536" level="INFO">Typing text 'Karnal' into text field 'xpath=//div[@id='city']//input'.</msg>
+<arg>${TXT_CITY}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:44.207553" elapsed="0.686848"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:44.896673" level="INFO">Sending key(s) ('ENTER',) to xpath=//div[@id='city']//input element.</msg>
+<msg time="2026-03-24T04:07:45.591191" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-03-24T04:07:45.591584" level="INFO">Releasing special key ENTER.</msg>
+<arg>${TXT_CITY}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-03-24T04:07:44.895279" elapsed="0.917053"/>
+</kw>
+<arg>state=Haryana</arg>
+<arg>city=Karnal</arg>
+<status status="PASS" start="2026-03-24T04:07:41.651600" elapsed="4.161273"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:41.650396" elapsed="4.163069"/>
+</test>
+<test id="s1-t8" name="Submit Form" line="30">
+<kw name="Submit Form" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-24T04:07:45.816353" level="INFO">Clicking element 'id=submit'.</msg>
+<arg>${BTN_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-24T04:07:45.815841" elapsed="0.485162"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Done}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-24T04:07:46.301944" elapsed="0.437164"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:45.815201" elapsed="0.924454"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:45.814103" elapsed="0.926177"/>
+</test>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-24T04:07:49.745860" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-24T04:07:46.743400" elapsed="3.002968"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-24T04:07:49.747270" elapsed="0.267033"/>
+</kw>
+<arg>Sleep</arg>
+<arg>3s</arg>
+<arg>AND</arg>
+<arg>Close Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-03-24T04:07:46.742357" elapsed="3.272058"/>
+</kw>
+<status status="PASS" start="2026-03-24T04:07:22.538807" elapsed="27.475658"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">debug</stat>
+</tag>
+<suite>
+<stat name="Test Case" id="s1" pass="8" fail="0" skip="0">Test Case</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
